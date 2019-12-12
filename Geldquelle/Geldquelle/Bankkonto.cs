@@ -8,27 +8,32 @@ namespace Geldquelle
 {
     public class Bankkonto
     {
-        private decimal v;
+        public Bankkonto() : this(100m) {}
 
-        public Bankkonto()
+        public Bankkonto(decimal Kontostand)
         {
+            if (Kontostand < 0)
+                throw new ArgumentException();
+            this.Kontostand = Kontostand;
         }
 
-        public Bankkonto(decimal v)
-        {
-            this.v = v;
-        }
-
-        public decimal Kontostand { get; set; }
+        public decimal Kontostand { get; protected set; }
 
         public void Einzahlen(decimal amount)
         {
-            throw new NotImplementedException();
+            if (amount <= 0)
+                throw new ArgumentException();
+            Kontostand += amount;
         }
 
-        public void Abheben(decimal validAmount)
+        public void Abheben(decimal amount)
         {
-            throw new NotImplementedException();
+            if (amount <= 0)
+                throw new ArgumentException();
+            else if (Kontostand - amount < 0)
+                throw new InvalidOperationException();
+
+            Kontostand -= amount;
         }
     }
 }
