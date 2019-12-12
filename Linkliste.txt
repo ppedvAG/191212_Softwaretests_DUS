@@ -3,3 +3,6 @@ https://github.com/ObjectivityLtd/Ocaramba/wiki/MsTest-DataDriven-tests-from-Xml
 
 Syntaxunterschiede zwischen MSTest, NUnit und XUnit
 https://www.c-sharpcorner.com/article/syntactical-difference-between-mstest-nunit-xunit2/
+
+Pose:
+https://github.com/tonerdo/pose
