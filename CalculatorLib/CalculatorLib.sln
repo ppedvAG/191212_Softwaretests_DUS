@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorLib.Tests.MSTest"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorLib.Tests.NUnit", "CalculatorLib.Tests.NUnit\CalculatorLib.Tests.NUnit.csproj", "{B6967E31-EB6B-4FED-81E7-1EBA418F7541}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorLib.Tests.XUnit", "CalculatorLib.Tests.XUnit\CalculatorLib.Tests.XUnit.csproj", "{32C37346-9015-4CF5-8551-1B4CB4947564}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{B6967E31-EB6B-4FED-81E7-1EBA418F7541}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6967E31-EB6B-4FED-81E7-1EBA418F7541}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6967E31-EB6B-4FED-81E7-1EBA418F7541}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32C37346-9015-4CF5-8551-1B4CB4947564}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32C37346-9015-4CF5-8551-1B4CB4947564}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32C37346-9015-4CF5-8551-1B4CB4947564}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32C37346-9015-4CF5-8551-1B4CB4947564}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
