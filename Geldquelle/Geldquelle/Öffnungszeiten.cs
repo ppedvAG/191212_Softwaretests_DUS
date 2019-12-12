@@ -28,5 +28,10 @@ namespace Geldquelle
                     return false;
             }
         }
+
+        public bool IsNowOpen()
+        {
+            return IsOpen(DateTime.Now);
+        }
     }
 }

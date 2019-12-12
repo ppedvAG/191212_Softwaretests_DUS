@@ -36,5 +36,14 @@ namespace Geldquelle.Tests
             DateTime testDatum = new DateTime(jahr, monat, tag, stunde, minute, 00);
             Assert.AreEqual(expectedResult,öz.IsOpen(testDatum));
         }
+
+
+        [TestMethod]
+        public void IsNowOpen_returns()
+        {
+            Öffnungszeiten öz = new Öffnungszeiten();
+
+            Assert.IsTrue(öz.IsNowOpen());
+        }
     }
 }
