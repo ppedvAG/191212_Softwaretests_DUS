@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.QualityTools.Testing.Fakes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Geldquelle.Tests
@@ -89,5 +90,29 @@ namespace Geldquelle.Tests
         }
 
         // Zustand, den man Einchecken
+
+
+        [TestMethod]
+        public void Reichtum_returns_correct_value()
+        {
+            using (ShimsContext.Create())
+            {
+                Bankkonto bankkonto = new Bankkonto();
+
+                Fakes.ShimBankkonto.AllInstances.KontostandGet = x => 0;
+                Assert.IsTrue(bankkonto.Reichtum == Reichtum.Zero);
+
+                Fakes.ShimBankkonto.AllInstances.KontostandGet = x => 90;
+                Assert.IsTrue(bankkonto.Reichtum == Reichtum.Arm);
+
+                Fakes.ShimBankkonto.AllInstances.KontostandGet = x => 5000;
+                Assert.IsTrue(bankkonto.Reichtum == Reichtum.Mittelstand);
+
+                Fakes.ShimBankkonto.AllInstances.KontostandGet = x => 8_000_000;
+                Assert.IsTrue(bankkonto.Reichtum == Reichtum.SehrReich);
+
+                // Problem: Reich und Oberes1Prozent wurde vergessen, test ist trotzdem grün !!!!!
+            }
+        }
     }
 }

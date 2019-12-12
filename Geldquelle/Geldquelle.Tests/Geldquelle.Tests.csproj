@@ -40,6 +40,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Geldquelle.Fakes">
+      <HintPath>FakesAssemblies\Geldquelle.Fakes.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
@@ -72,6 +75,7 @@
   <ItemGroup>
     <Fakes Include="Fakes\System.fakes" />
     <Fakes Include="Fakes\mscorlib.fakes" />
+    <Fakes Include="Fakes\Geldquelle.fakes" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
