@@ -1,6 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.QualityTools.Testing.Fakes;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Pose;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,11 +42,47 @@ namespace Geldquelle.Tests
 
 
         [TestMethod]
-        public void IsNowOpen_returns()
+        public void IsNowOpen_returns_FakeFramework() // VisualStudio Enterprise
         {
+            // References -> Rechtsklick -> Add Fakes Libary
             Öffnungszeiten öz = new Öffnungszeiten();
 
-            Assert.IsTrue(öz.IsNowOpen());
+            // Definieren, dass statt DateTime.Now unser Fake genommen werden soll
+            using (ShimsContext.Create())
+            { // Codebereich, wo unsere Fake-Konfiguration gültig ist:
+
+                System.Fakes.ShimDateTime.NowGet = () => new DateTime(1848, 3, 13, 12, 45, 59);
+
+                DateTime date = DateTime.Now;
+
+                Assert.IsTrue(öz.IsNowOpen());
+
+                // Andere Varianten:
+                System.IO.Fakes.ShimFile.ExistsString = file => true; // jede datei Existiert ;)
+
+                if (File.Exists("7:\\demo/abc&%$%$\\&&%$&\t\tasd\tdemo.&%$.exe"))
+                    ;
+                else
+                    ;
+            }
+
+            DateTime date2 = DateTime.Now;
+
+        }
+
+        [TestMethod]
+        public void IsNowOpen_returns_tonerdo_pose() // OpenSource: Pose
+        {
+            Shim fakeDateTimeNow = Shim.Replace(() => DateTime.Now)
+                                       .With(() => new DateTime(2199, 12, 24, 13, 55, 00));
+
+            DateTime heute = DateTime.Now; // original
+
+            PoseContext.Isolate(() =>
+            {
+                // Logik:.....
+                heute = DateTime.Now;
+            },fakeDateTimeNow);
         }
     }
 }
