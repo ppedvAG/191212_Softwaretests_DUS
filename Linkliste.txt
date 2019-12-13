@@ -1,3 +1,6 @@
+Email: MichaelZ@ppedv.at   /.de
+
+
 Datadriven Tests mit MSTest:
 https://github.com/ObjectivityLtd/Ocaramba/wiki/MsTest-DataDriven-tests-from-Xml-and-CSV-files
 
@@ -20,3 +23,6 @@ https://github.com/AutoFixture/AutoFixture/wiki/Cheat-Sheet
 Moq für das Auflösen von Abhängigkeiten:
 https://github.com/moq/moq4
 https://github.com/Moq/moq4/wiki/Quickstart
+
+Klassen immer als Public erstellen:
+https://stackoverflow.com/questions/700086/how-do-you-default-a-new-class-to-public-when-creating-it-in-visual-studio
