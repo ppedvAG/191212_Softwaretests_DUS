@@ -88,6 +88,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ppedv.ProjectYeong.Data.EF\ppedv.ProjectYeong.Data.EF.csproj">
+      <Project>{66BFBD9D-4AC5-4570-AA7D-30382C16D041}</Project>
+      <Name>ppedv.ProjectYeong.Data.EF</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ppedv.ProjectYeong.Domain\ppedv.ProjectYeong.Domain.csproj">
       <Project>{47c634d4-6d85-40d9-a865-8a6dfc680654}</Project>
       <Name>ppedv.ProjectYeong.Domain</Name>
@@ -95,6 +99,10 @@
     <ProjectReference Include="..\ppedv.ProjectYeong.Logic\ppedv.ProjectYeong.Logic.csproj">
       <Project>{7b48fbc2-05cc-4151-b073-c91a6c9c351a}</Project>
       <Name>ppedv.ProjectYeong.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Robotech.Hardware\Robotech.Hardware.csproj">
+      <Project>{952d36d4-597f-4e86-833b-e6e46a4b238f}</Project>
+      <Name>Robotech.Hardware</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -3,6 +3,7 @@ using ppedv.ProjectYeong.Domain;
 using ppedv.ProjectYeong.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace ppedv.ProjectYeong.Logic
@@ -15,6 +16,11 @@ namespace ppedv.ProjectYeong.Logic
         }
         public Core(IDevice device)
         {
+            this.device = device;
+        }
+        public Core(IRepository repo, IDevice device)
+        {
+            this.repo = repo;
             this.device = device;
         }
 
@@ -45,6 +51,14 @@ namespace ppedv.ProjectYeong.Logic
             return repo.GetAll<Book>();
         }
 
+        public Book GetBookWithHighestPrice()
+        {
+            return repo.GetAll<Book>()
+                       .OrderByDescending(x => x.BasePrice)
+                       .First();
+        }
+
+
         public Book[] PrintBooks(int amount)
         {
             if (amount < 0)
@@ -57,6 +71,15 @@ namespace ppedv.ProjectYeong.Logic
             }
 
             return newBooks;
+        }
+
+        public void PrintBooksAndSaveIntoDB(int amount)
+        {
+            var printedBooks = PrintBooks(amount);
+            foreach (var book in printedBooks)
+                repo.Add(book);
+
+            repo.Save();
         }
     }
 }
