@@ -15,8 +15,6 @@ namespace ppedv.ProjectYeong.Data.EF
         }
         private readonly EFContext context;
 
-
-
         public void Add<T>(T item) where T : Entity
         {
             context.Set<T>().Add(item);
