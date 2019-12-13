@@ -16,3 +16,7 @@ https://fluentassertions.com/introduction
 Autofixture für das Generieren von Testdaten:
 https://github.com/AutoFixture/AutoFixture
 https://github.com/AutoFixture/AutoFixture/wiki/Cheat-Sheet
+
+Moq für das Auflösen von Abhängigkeiten:
+https://github.com/moq/moq4
+https://github.com/Moq/moq4/wiki/Quickstart

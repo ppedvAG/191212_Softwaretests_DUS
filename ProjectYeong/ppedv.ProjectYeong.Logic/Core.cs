@@ -47,6 +47,9 @@ namespace ppedv.ProjectYeong.Logic
 
         public Book[] PrintBooks(int amount)
         {
+            if (amount < 0)
+                throw new ArgumentException();
+
             Book[] newBooks = new Book[amount];
             for (int i = 0; i < amount; i++)
             {
