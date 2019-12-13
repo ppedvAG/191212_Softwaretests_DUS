@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.ProjectYeong.Logic", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.ProjectYeong.UI.Konsole", "ppedv.ProjectYeong.UI.Konsole\ppedv.ProjectYeong.UI.Konsole.csproj", "{F6020427-EC31-4C92-9FA5-B8D525892B02}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robotech.Hardware", "Robotech.Hardware\Robotech.Hardware.csproj", "{952D36D4-597F-4E86-833B-E6E46A4B238F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{F6020427-EC31-4C92-9FA5-B8D525892B02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6020427-EC31-4C92-9FA5-B8D525892B02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6020427-EC31-4C92-9FA5-B8D525892B02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{952D36D4-597F-4E86-833B-E6E46A4B238F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{952D36D4-597F-4E86-833B-E6E46A4B238F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{952D36D4-597F-4E86-833B-E6E46A4B238F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{952D36D4-597F-4E86-833B-E6E46A4B238F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +70,7 @@ Global
 		{50672B4B-4400-4AE6-BC26-D21889029625} = {A6D38EFD-0BFF-46A0-AAEA-4DEC45CB1653}
 		{7B48FBC2-05CC-4151-B073-C91A6C9C351A} = {5747790B-5195-4EE1-951E-6DDD4745C107}
 		{F6020427-EC31-4C92-9FA5-B8D525892B02} = {C6404ED9-7EBF-4E9B-AF4E-F72370C3C181}
+		{952D36D4-597F-4E86-833B-E6E46A4B238F} = {5747790B-5195-4EE1-951E-6DDD4745C107}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C54E5A63-DB97-47B1-A8BB-A39318919014}
