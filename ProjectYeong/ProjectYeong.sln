@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robotech.Hardware", "Robote
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robotech.Hardware.Tests", "Robotech.Hardware.Tests\Robotech.Hardware.Tests.csproj", "{81E9ABDA-D1D9-4F87-94B0-B1E364D40E26}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.ProjectYeong.Logic.Tests", "ppedv.ProjectYeong.Logic.Tests\ppedv.ProjectYeong.Logic.Tests.csproj", "{7A548663-7C7F-49A3-B48C-42EAF1ECB414}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,6 +67,10 @@ Global
 		{81E9ABDA-D1D9-4F87-94B0-B1E364D40E26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81E9ABDA-D1D9-4F87-94B0-B1E364D40E26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81E9ABDA-D1D9-4F87-94B0-B1E364D40E26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A548663-7C7F-49A3-B48C-42EAF1ECB414}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A548663-7C7F-49A3-B48C-42EAF1ECB414}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A548663-7C7F-49A3-B48C-42EAF1ECB414}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A548663-7C7F-49A3-B48C-42EAF1ECB414}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,6 +84,7 @@ Global
 		{F6020427-EC31-4C92-9FA5-B8D525892B02} = {C6404ED9-7EBF-4E9B-AF4E-F72370C3C181}
 		{952D36D4-597F-4E86-833B-E6E46A4B238F} = {5747790B-5195-4EE1-951E-6DDD4745C107}
 		{81E9ABDA-D1D9-4F87-94B0-B1E364D40E26} = {5747790B-5195-4EE1-951E-6DDD4745C107}
+		{7A548663-7C7F-49A3-B48C-42EAF1ECB414} = {5747790B-5195-4EE1-951E-6DDD4745C107}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C54E5A63-DB97-47B1-A8BB-A39318919014}
