@@ -6,3 +6,13 @@ https://www.c-sharpcorner.com/article/syntactical-difference-between-mstest-nuni
 
 Pose:
 https://github.com/tonerdo/pose
+
+SpecFlow für BDD
+https://specflow.org/getting-started/
+
+FluentAssertions für einfacheren TestCode:
+https://fluentassertions.com/introduction
+
+Autofixture für das Generieren von Testdaten:
+https://github.com/AutoFixture/AutoFixture
+https://github.com/AutoFixture/AutoFixture/wiki/Cheat-Sheet

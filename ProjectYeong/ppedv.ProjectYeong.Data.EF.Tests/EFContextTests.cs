@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using AutoFixture;
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ppedv.ProjectYeong.Domain;
 
@@ -75,6 +79,67 @@ namespace ppedv.ProjectYeong.Data.EF.Tests
                 var loadedBook = context.Book.Find(b1.ID);
                 Assert.IsNull(loadedBook);
             }
+        }
+
+        [TestMethod]
+        public void EFContext_Can_CRUD_Book_FluentAssertions()
+        {
+            Book b1 = new Book { Author = "Michael Zöhling", Title = "Unittests leicht gemacht", ISBN = "abcasdksadlk123123", BasePrice = 9.99m, Pages = 200 };
+            string newTitle = "Unittests schwer gemacht :)";
+
+            // Create
+            using (EFContext context = new EFContext(connectionString))
+            {
+                context.Book.Add(b1);
+                context.SaveChanges();
+            }
+
+            // Check für Create / Read
+            using (EFContext context = new EFContext(connectionString))
+            {
+                var loadedBook = context.Book.Find(b1.ID);
+                // Assert.AreEqual(b1.ISBN, loadedBook.ISBN); // Richtige Vorgehensweise: Graphen-Vergleich
+
+                // loadedBook.ISBN.Should().Be(b1.ISBN);
+                // Graph:
+                loadedBook.Should().BeEquivalentTo(b1);
+
+                // Update
+                loadedBook.Title = newTitle;
+                context.SaveChanges();
+            }
+
+            // Check für Update
+            using (EFContext context = new EFContext(connectionString))
+            {
+                var loadedBook = context.Book.Find(b1.ID);
+
+                //Assert.AreEqual(newTitle, loadedBook.Title);
+                loadedBook.Title.Should().Be(newTitle);
+
+                // Delete
+                context.Book.Remove(loadedBook);
+                context.SaveChanges();
+            }
+
+            // Check für Delete
+            using (EFContext context = new EFContext(connectionString))
+            {
+                var loadedBook = context.Book.Find(b1.ID);
+                // Assert.IsNull(loadedBook);
+                loadedBook.Should().BeNull();
+            }
+        }
+
+        [TestMethod]
+        public void EFContext_Autofixture_Test()
+        {
+            Fixture fix = new Fixture();
+
+            Book b0 = fix.Create<Book>(); 
+            List<Book> b1 = fix.CreateMany<Book>(1000).ToList();
+
+            BookStore bs = fix.Create<BookStore>();
         }
     }
 }
