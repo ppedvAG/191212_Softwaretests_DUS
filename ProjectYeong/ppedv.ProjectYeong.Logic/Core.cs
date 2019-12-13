@@ -13,7 +13,13 @@ namespace ppedv.ProjectYeong.Logic
         {
             this.repo = repo;
         }
+        public Core(IDevice device)
+        {
+            this.device = device;
+        }
+
         private readonly IRepository repo;
+        private readonly IDevice device;
 
         // Geschäftslogik
 
@@ -37,6 +43,17 @@ namespace ppedv.ProjectYeong.Logic
         public IEnumerable<Book> GetAllBooks()
         {
             return repo.GetAll<Book>();
+        }
+
+        public Book[] PrintBooks(int amount)
+        {
+            Book[] newBooks = new Book[amount];
+            for (int i = 0; i < amount; i++)
+            {
+                newBooks[i] = device.PrintBook();
+            }
+
+            return newBooks;
         }
     }
 }
