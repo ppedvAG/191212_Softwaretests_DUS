@@ -21,7 +21,10 @@ namespace ppedv.ProjectYeong.Logic
         {
             Fixture fix = new Fixture();
 
-            var stores = fix.CreateMany<BookStore>(5);
+            //var stores = fix.CreateMany<BookStore>(5);
+            var stores = fix.Build<BookStore>()
+                            .With(x => x.Name, "Michis Store")
+                            .CreateMany(5);
 
             foreach (var store in stores)
             {
@@ -29,6 +32,11 @@ namespace ppedv.ProjectYeong.Logic
             }
 
             repo.Save();
+        }
+
+        public IEnumerable<Book> GetAllBooks()
+        {
+            return repo.GetAll<Book>();
         }
     }
 }

@@ -33,7 +33,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoFixture, Version=4.11.0.0, Culture=neutral, PublicKeyToken=b24654c590009d4f, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoFixture.4.11.0\lib\net452\AutoFixture.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Fare, Version=2.1.0.0, Culture=neutral, PublicKeyToken=ea68d375bf33a7c8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fare.2.1.1\lib\net35\Fare.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -48,6 +61,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ppedv.ProjectYeong.Data.EF\ppedv.ProjectYeong.Data.EF.csproj">
+      <Project>{66bfbd9d-4ac5-4570-aa7d-30382c16d041}</Project>
+      <Name>ppedv.ProjectYeong.Data.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ppedv.ProjectYeong.Domain\ppedv.ProjectYeong.Domain.csproj">
+      <Project>{47c634d4-6d85-40d9-a865-8a6dfc680654}</Project>
+      <Name>ppedv.ProjectYeong.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ppedv.ProjectYeong.Logic\ppedv.ProjectYeong.Logic.csproj">
+      <Project>{7b48fbc2-05cc-4151-b073-c91a6c9c351a}</Project>
+      <Name>ppedv.ProjectYeong.Logic</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
