@@ -6,6 +6,4 @@
         public int Amount { get; set; }
         public decimal SalePrice { get; set; } 
     }
-
-
 }
